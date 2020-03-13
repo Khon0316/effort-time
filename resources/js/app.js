@@ -6,6 +6,8 @@ import Vuex from 'vuex';
 import {routes} from './routes';
 import StoreData from './store';
 
+import App from './components/App';
+
 Vue.use(VueRouter);
 Vue.use(Vuex);
 
@@ -20,5 +22,7 @@ const app = new Vue({
     el: '#app',
     router,
     store,
-    components: {}
+    components: {
+        App
+    }
 });

@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+Route::group(['prefix' => '/v1'], function () {
+    Route::post('/login', 'API\Auth\LoginController@login');
+    Route::post('/register', 'API\Auth\RegisterController@register');
+});
+
+Route::middleware('auth:airlock')->get('/user', function (Request $request) {
     return $request->user();
 });

@@ -1,6 +1,5 @@
 <template>
 <div>
-    HI
     <Header />
 </div>
 </template>
